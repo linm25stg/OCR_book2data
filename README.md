@@ -1,7 +1,6 @@
 ### これは何？
 **GoogleDriveに画像を投げると勝手にOCRされてドキュメントが作成される機能**を利用するスクリプトです
-![](https://drive.google.com/uc?export=view&id=1_wZFvyJZMthoopWg6OC3a-3TKKWSieny)
-
+![](https://drive.google.com/uc?export=view&id=1_wZFvyJZMthoopWg6OC3a-3TKKWSieny)  
 作成者はWin10環境のWSL(Ubuntu18.04)で使用しているため、Macは知りません。
 
 ## 使用には以下のものが必要です
@@ -38,13 +37,15 @@ $ sudo book2data.sh /mnt/d/OCR/とある書籍/01/ 1wxzzCXPfmKZV8VnLqaeGPTW1Pxxx
 
 - 拡張子がtxtじゃないんだが？
     + 仕様です。 っていうか`--mime text/plain`で指定してるんだけど、謎拡張子で落ちてくるんだよね…
+        + Win10だと**asm**、Ubuntuなら**asc**
     + 一応`book2data.sh`の方では`asc → txt`する様に書いてるけど、Ubuntu 以外のユーザーは書き換えて、どうぞ
+        + 表示gifでは自分用の`book2data.sh`を動かしてるので、Win10用の`asm`って出てます
 
 - 半角スペースが発生する
     + 仕様です。半角指定して置換削除すればいいんじゃないっすかねぇ(半ギレ)
         + `sed 's/ //g' ${1}/*.asc`を書いても上手く働かなかった…
 
-- 自動的に結合して1個の`.txt`にならない
+- 自動的に**結合して1個の`.txt`にならない**
     + 頑張ったのですが、上手くいきませんでした。**是非教えて下さい！**
     + `basename`を使って、$1パスの最後のディレクトリ名を 結合txt の名前にしたいなぁって、ミサカはミサカは…
 
