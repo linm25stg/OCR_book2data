@@ -1,6 +1,7 @@
 ### これは何？
 **GoogleDriveに画像を投げると勝手にOCRされてドキュメントが作成される機能**を利用するスクリプトです
 ![](https://drive.google.com/uc?export=view&id=1_wZFvyJZMthoopWg6OC3a-3TKKWSieny)
+
 作成者はWin10環境のWSL(Ubuntu18.04)で使用しているため、Macは知りません。
 
 ## 使用には以下のものが必要です
